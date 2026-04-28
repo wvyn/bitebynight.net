@@ -1,81 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bite By Night</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #0d0d0d;
-            color: #f5f5f5;
-        }
-        header {
-            background: #111;
-            padding: 20px;
-            text-align: center;
-            border-bottom: 2px solid red;
-        }
-        header h1 {
-            margin: 0;
-            color: red;
-        }
-        main {
-            padding: 20px;
-        }
-        section {
-            margin-bottom: 20px;
-            padding: 15px;
-            background: #1a1a1a;
-            border-radius: 8px;
-        }
-        h2 {
-            color: #ff4444;
-        }
-        footer {
-            text-align: center;
-            padding: 10px;
-            background: #111;
-            border-top: 2px solid red;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bite By Night | Official Site</title>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+<style>
+body {
+    margin: 0;
+    font-family: 'Orbitron', sans-serif;
+    background: radial-gradient(circle at top, #0a0a0a, #000000);
+    color: #fff;
+    overflow-x: hidden;
+}
+
+header {
+    text-align: center;
+    padding: 40px 20px;
+    background: rgba(0,0,0,0.8);
+    border-bottom: 2px solid red;
+}
+
+header h1 {
+    font-size: 3em;
+    color: red;
+    animation: flicker 2s infinite;
+}
+
+@keyframes flicker {
+    0%,18%,22%,25%,53%,57%,100% {opacity:1;}
+    20%,24%,55% {opacity:0.4;}
+}
+
+.hero {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.hero p {
+    font-size: 1.2em;
+    opacity: 0.8;
+}
+
+.btn {
+    margin-top: 20px;
+    padding: 15px 30px;
+    background: red;
+    border: none;
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #ff4444;
+    transform: scale(1.1);
+}
+
+section {
+    padding: 40px 20px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.card {
+    background: #111;
+    padding: 20px;
+    margin: 15px 0;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px red;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    border-top: 2px solid red;
+    background: #000;
+}
+
+.nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+.nav a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.nav a:hover {
+    color: red;
+}
+</style>
 </head>
 <body>
 
 <header>
-    <h1>Bite By Night</h1>
-    <p>Survive the night... or become the hunter.</p>
+    <h1>BITE BY NIGHT</h1>
+    <div class="nav">
+        <a href="#about">About</a>
+        <a href="#features">Features</a>
+        <a href="#studio">Studio</a>
+    </div>
 </header>
 
-<main>
-    <section>
-        <h2>About the Game</h2>
-        <p>Bite By Night is a Roblox survival horror game where players take on the role of Survivors or a Killer. Survivors must complete objectives and escape before 6 AM, while the Killer hunts them down.</p>
-    </section>
+<div class="hero">
+    <h2>Survive the Night... or Become the Hunter</h2>
+    <p>An intense asymmetrical horror experience.</p>
+    <button class="btn" onclick="goToGame()">Play Now</button>
+</div>
 
-    <section>
-        <h2>Gameplay</h2>
-        <ul>
-            <li>Choose between Survivor or Killer</li>
-            <li>Work as a team or hunt alone</li>
-            <li>Use abilities and strategy to win</li>
-        </ul>
-    </section>
+<section id="about">
+    <h2>About The Game</h2>
+    <div class="card">
+        Bite By Night is a high-intensity multiplayer horror game where players take on the role of Survivors or the Killer. Survive until morning—or eliminate everyone before dawn.
+    </div>
+</section>
 
-    <section>
-        <h2>Features</h2>
-        <ul>
-            <li>Multiple classes (Healer, Fighter, Security Guard, etc.)</li>
-            <li>Unique killers with special abilities</li>
-            <li>Dark, immersive horror maps</li>
-        </ul>
-    </section>
-</main>
+<section id="features">
+    <h2>Features</h2>
+    <div class="card">Unique Survivors with abilities</div>
+    <div class="card">Powerful Killers with different playstyles</div>
+    <div class="card">Dark immersive maps</div>
+    <div class="card">Team-based survival mechanics</div>
+</section>
+
+<section id="studio">
+    <h2>Game Studio</h2>
+    <div class="card">
+        Developed by <strong>Totally Not Secret Games</strong><br>
+        Creating unique and intense gaming experiences.
+    </div>
+</section>
 
 <footer>
-    <p>Fan-made page for Bite By Night</p>
+    <p>© 2026 Bite By Night | Totally Not Secret Games</p>
 </footer>
+
+<script>
+function goToGame() {
+    window.location.href = "https://www.roblox.com"; // replace with your actual game link
+}
+</script>
 
 </body>
 </html>
